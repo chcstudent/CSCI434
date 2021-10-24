@@ -9,96 +9,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSCI 434: Shattered</title>
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
-      <center>
-        <div id="logo"></div>
-      </center>
+
+<!-- import css-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
     
   </head>
   
   <body>
-    <!--Navigation bar-->
-    <div class="area"></div><nav class="main-menu">
-            <ul>
-                <li>
-                    <a href="https://chcstudent.github.io/CSCI434/">
-                        <i class="fa fa-skull fa-2x"></i>
-                        <span class="nav-text">
-                            Shattered
-                        </span>
-                    </a>
-                  
-                </li>
-                <li class="has-subnav">
-                    <a href="https://chcstudent.github.io/CSCI434/feneryss.html">
-                        <i class="fa fa-skull fa-2x"></i>
-                        <span class="nav-text">
-                            Feneryss
-                        </span>
-                    </a>
-                    
-                </li>
-                <li class="has-subnav">
-                    <a href="https://chcstudent.github.io/CSCI434/nemzul.html">
-                       <i class="fa fa-skull fa-2x"></i>
-                        <span class="nav-text">
-                            Nemzul's Bestiary
-                        </span>
-                    </a>
-                    
-                </li>
-                <li class="has-subnav">
-                    <a href="https://chcstudent.github.io/CSCI434/howtoplay.html">
-                       <i class="fa fa-skull fa-2x"></i>
-                        <span class="nav-text">
-                            How to Play
-                        </span>
-                    </a>
-                   
-                </li>
-                <li>
-                    <a href="https://chcstudent.github.io/CSCI434/about.html">
-                        <i class="fa fa-skull fa-2x"></i>
-                        <span class="nav-text">
-                            About Us
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    
-    <h1>
-      <img class="logo" src="/CSCI434/Shattered.png">
-    </h1>
-    <br>
-    <p><b>Welcome!</b> I'm Cory Conrad, a man of many trades. I've worked in fast food and a frozen storage warehouse. In the Air Force I was an airborne cryptolinguist (Arabic), 
-      and post-Air Force I've provided near real-time analysis of full-motion video. Currently, I provide training simulations for my former linguist colleagues. More important
-      to me than those job titles, however, is my <i>passion</i>. With a handful of my friends, I have developed and published a tabletop roleplaying game, <a href="https://neverdarkenough.com/">Shattered</a>.
-      My latest blessing is the opportunity to officially label myself an <b>editor</b> of a novel soon to be published by my close friend and fellow developer, Josh "Zip" Pietrzykowski.
-      <br>
-    </p>
-    <h2>What's a Tabletop RPG?</h2>
-    <p>
-      A tabletop RPG (roleplaying game) is a cooperative experience, where players collaborate to tell a story of adventure, danger, and intrigue. The most popular example is 
-      <a href"https://www.dndbeyond.com/">Dungeons and Dragons</a>, but it would be unfair to the genre to say they're all the same, just like saying all novels or all movies are the same. There is as much nuance 
-      among tabletop RPGs as exists between book genres or film categories. But there are 3 main elements to every tabletop RPG: Storytelling, Setting, and Mechanics.
-      <br>
-      <b>Storytelling</b> refers to how the players tell the story. The most popular option is a <i>Game Master</i>. They serve as a narrator to the game's events, driving the plot
-      and managing story elements such as setting and characters that aren't controlled by the other players. This is the method Shattered uses, but it's not the only option. 
-      <br>
-      <b>Setting</b> is simply that: where the game takes place. Medieval Fantasy is a popular setting, often borrowing elements from European history and mythology. Your "knights
-      in shining armor" and all that. Shattered is set in an entirely original world named <i>Feneryss</i> that is slowly recovering from a cataclysmic event. Its denizens face many
-      struggles: the Undead Tide, eldritch abominations, manic weather patterns, and much more.
-      <br>
-      <b>Mechanics</b> refers to how players interact with the game elements. Many games use dice. Shattered is one of them. Many others, however, use a deck of cards. Some even have
-      unique cards or dice sets that are specifically crafted for their mechanics, such as <a href="https://fate-srd.com/">FATE</a>. As stated, Shattered uses dice, and not just the
-      dice most people know, with six sides. We use four-, six-, eight- and ten-sided dice together to represent a character's skill (or lack thereof) whenever they perform actions that
-      have meaningful consequences for success and failure.
-      <br>
-      <img src="/CSCI434/Gravekeepers.png"
-           alt="The Gravekeepers fend off an undead horde.">
-    </p>
+<!-- this is the lefthand navigation bar, which highlights the active page-->
+    <div class="sidenav">
+		<div class="sidenav-container">
+			<a class="active" href="index.html">Shattered</a>
+			<a href="feneryss.html">The World</a>
+			<a href="nemzul.html">Nemzul's Bestiary</a>
+			<a href="howtoplay.html">How to Play</a>
+			<a href="aboutus.html">About Us</a>
+		</div>
+	</div>
+
+<!--main class separates the main body of the page from the navbar -->
+	<div class="main">
+		  <img class="logo" src="shattered_small.png">
+		<br>
+		<p><b>Welcome!</b> I'm Cory Conrad, a man of many trades. I've worked in fast food and a frozen storage warehouse. In the Air Force I was an airborne cryptolinguist (Arabic), 
+		  and post-Air Force I've provided near real-time analysis of full-motion video. Currently, I provide training simulations for my former linguist colleagues. More important
+		  to me than those job titles, however, is my <i>passion</i>. With a handful of my friends, I have developed and published a tabletop roleplaying game, <a href="https://neverdarkenough.com/">Shattered</a>.
+		  My latest blessing is the opportunity to officially label myself an <b>editor</b> of a novel soon to be published by my close friend and fellow developer, Josh "Zip" Pietrzykowski.
+		  <br>
+		</p>
+		<h2>What's a Tabletop RPG?</h2>
+		<p>
+		  A tabletop RPG (roleplaying game) is a cooperative experience, where players collaborate to tell a story of adventure, danger, and intrigue. The most popular example is 
+		  <a href="https://www.dndbeyond.com/">Dungeons and Dragons</a>, but it would be unfair to the genre to say they're all the same, just like saying all novels or all movies are the same. There is as much nuance 
+		  among tabletop RPGs as exists between book genres or film categories. But there are 3 main elements to every tabletop RPG: Storytelling, Setting, and Mechanics.
+		  <br>
+		  <b>Storytelling</b> refers to how the players tell the story. The most popular option is a <i>Game Master</i>. They serve as a narrator to the game's events, driving the plot
+		  and managing story elements such as setting and characters that aren't controlled by the other players. This is the method Shattered uses, but it's not the only option. 
+		  <br>
+		  <b>Setting</b> is simply that: where the game takes place. Medieval Fantasy is a popular setting, often borrowing elements from European history and mythology. Your "knights
+		  in shining armor" and all that. Shattered is set in an entirely original world named <i>Feneryss</i> that is slowly recovering from a cataclysmic event. Its denizens face many
+		  struggles: the Undead Tide, eldritch abominations, manic weather patterns, and much more.
+		  <br>
+		  <b>Mechanics</b> refers to how players interact with the game elements. Many games use dice. Shattered is one of them. Many others, however, use a deck of cards. Some even have
+		  unique cards or dice sets that are specifically crafted for their mechanics, such as <a href="https://fate-srd.com/">FATE</a>. As stated, Shattered uses dice, and not just the
+		  dice most people know, with six sides. We use four-, six-, eight- and ten-sided dice together to represent a character's skill (or lack thereof) whenever they perform actions that
+		  have meaningful consequences for success and failure.
+		  <br>
+		  <img src="Gravekeepers.png"
+			   alt="The Gravekeepers fend off an undead horde.">
+		</p>
+	</div>
   </body>
   
 </html>

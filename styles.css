@@ -34,14 +34,15 @@ img {
 
 /*Shattered banner*/
 #logo {
-  
+  max-width: 100%;
+  height: auto;
 }
 
-.go-2x {
+.fa-2x {
 font-size: 2em;
 }
 
-.go {
+.fa {
 position: relative;
 display: table-cell;
 width: 60px;
@@ -51,7 +52,7 @@ vertical-align: middle;
 font-size:20px;
 }
 
-.go-skull{
+.fa-skull{
  img{
    src="/CSCI434/skull.png";
   }

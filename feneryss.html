@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Assignment: CSCI Unit 2 Assignment 1
+    Date: 31 OCT 21
+    Name: Cory Conrad
+    Description: A webpage pitching the TTRPG, Shattered. 5 pages. An introduction, a slideshow explaining points of interest, a list of monsters, a brief explanation of how to play, and a page about myself and fellow creators.
+  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCI 434: Shattered</title>
+
+<!-- import css-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+  
+<body>
+<!-- this is the lefthand navigation bar, which highlights the active page-->
+    <div class="sidenav">
+		<div class="sidenav-container">
+			<a href="index.html">Shattered</a>
+			<a class="active" href="feneryss.html">The World</a>
+			<a href="nemzul.html">Nemzul's Bestiary</a>
+			<a href="howtoplay.html">How to Play</a>
+			<a href="aboutus.html">About Us</a>
+		</div>
+	</div>
+
+<!--main class separates the main body of the page from the navbar -->
+	<div class="main">
+		  <img class="logo" src="shattered_small.png">
+		<br>
+        
+<!-- Slideshow container -->
+        <div class="feneryss-slideshow">
+
+<!-- Slides with captions -->
+          <div class="feneryss-slides fade">
+            <img src="LOC%20-%20GlassForest.jpg">
+            <div class="text">Razor-edged volcanic glass makes for difficult living in the Glass Forest, but the Shades call it home.</div>
+          </div>
+
+          <div class="feneryss-slides fade">
+            <img src="LOC%20-%20AlecianPlains.jpg">
+            <div class="text">The Alecian Plains is a swathe of central Feneryss that produces most of the food thanks to its unusually high fertility.</div>
+          </div>
+            
+          <div class="feneryss-slides fade">
+            <img src="LOC%20-%20TheMaw.jpg">
+            <div class="text">Beyond Feneryss is the Maw: an endless ocean of magma.</div>
+          </div>
+          
+          <div class="feneryss-slides fade">
+            <img src="CITY%20-%20Lanis.png" style="width:100%">
+            <div class="text">Not all was lost. Lanis stands as bastion of progress and civilization, built around a vessel for the stars.</div>
+          </div>
+            
+          <div class="feneryss-slides fade">
+            <img src="CITY%20-%20Pulse.png">
+            <div class="text"> There is no greater symbol of mankind's industrious and resilient nature than the city of Pulse and its massive walls.</div>
+          </div>
+
+          <div class="feneryss-slides fade">
+            <img src="CITY%20-%20Lokoran.png">
+            <div class="text">Lokoran rests upon the single greatest source of pure, potable water: a scarce resource in Feneryss.</div>
+          </div>
+
+<!-- Next and previous buttons to move between slides -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+<!-- The slideshow dots -->
+          <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+          </div>
+        
+        </div>
+        <!--End of Slideshow container -->
+        
+        <br>
+        <h1 class="world-header">
+            Feneryss
+        </h1>
+        <br>
+        <p>
+            <b>Feneryss</b> is a continental world in strife. A horde of zombies and other undead horrors- known as the Undead Tide- roam the continent as regularly as the seasons. Chaotic storms of ash or UV lightning keep humankind locked into its handful of city-states. Unruly cycles of magic, known as arkäna, have both blessed Feneryans with unfathomable power and enhanced the unruly forces of nature they contend with.
+        </p>
+        <br>
+        <h1 class="apocalypse">
+            The Apocalypse
+        </h1>
+        <p>
+            Several hundred years ago, humankind was thriving. Scholars speak of towering palaces, lush vegetation, and even vessels that could ascend beyond the permanent cloud cover to worlds beyond.
+            <br>
+            But all was not well. The Alypse cult had grown so large it had formed its own nation. They gathered in grand fashion and attempted a nationwide ritual suicide to summon their dark god, Ragnarok. Their failure was cataclysmic and nearly eliminated all life on Feneryss.
+        </p>
+        <br>
+        
+
+     </div>
+    
+<!-- javascript required to run the slideshow and perform the fade transition -->    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("feneryss-slides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

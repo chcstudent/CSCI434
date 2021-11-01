@@ -1,6 +1,6 @@
 /*
 Coder: Cory Conrad
-Date: 24 OCT 21
+Date: 31 OCT 21
 Description: CSS for Shattered Github
 */
 
@@ -10,6 +10,7 @@ Description: CSS for Shattered Github
   padding: 0;
   border: none;
   font-family: Helvetica, sans-serif;
+  box-sizing:border-box
 }
 
 /*default body settings*/
@@ -17,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
+  font-size: small;
   background-color: #000000;
   color: #ffffff;
 }
@@ -25,16 +27,56 @@ h1 {
   text-align: left;
   font-family: Helvetica, sans-serif;
   font-weight: bold;
-  font-size: medium;
+  font-size: larger;
   text-decoration: none;
   margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/*center the first h1 on a page */
+.world-header {
+    text-align: center;
+}
+
+/*extra margin for the Apocalypse header on feneryss*/
+.apocalypse {
+    margin-bottom: 10px;
 }
 
 p {
-  margin: 0;
+  margin: 0px;
   font-size: medium;
   text-align: left;
   color: #FFFFFF;
+}
+
+/*intro para on aboutus, centered with heavy padding */
+p.INDE-intro {
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: #D22B2B;
+    padding: 5px 100px 5px 100px;
+}
+
+/*text left of a dev image on aboutus */
+p.text-left{
+    clear: right;
+    overflow: auto;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: #D22B2B;
+    padding: 5px;
+}
+
+/*text right of a dev image on aboutus */
+p.text-right{
+    clear: left;
+    overflow: auto;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: #D22B2B;
+    padding: 5px;
 }
 
 /*puts some space around an unordered list*/
@@ -71,6 +113,22 @@ img {
   height: auto;
 }
 
+/*dev img floating left */
+img.dev-left{
+    float: left;
+    padding: 5px 10px 5px 5px;
+    height: 200px;
+    width: auto;
+}
+
+/*dev img floating right */
+img.dev-right{
+    float: right;
+    padding: 5px 10px 5px 5px;
+    height: 200px;
+    width: auto;
+}
+
 /*shattered banner settings*/
 .logo{
 	max-width: 90%;
@@ -80,13 +138,6 @@ img {
 	position: relative;
 	left: 25%;
 	padding-bottom: 0px 10px;
-}
-
-/*settings for the monster images*/
-.monster{
-	max-height: 40vh;
-	max-width: 40vh;
-	width: auto;
 }
 
 /*settings for sidebar space*/
@@ -130,9 +181,133 @@ img {
 /*spaces the main body of the page from the sidebar*/
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 30px;
+  margin-right: 50px;
+  font-size: 28px;
 }
+
+/* slideshow container in feneryss*/
+.feneryss-slideshow {
+  max-height: 352px;
+  max-width: 800px;
+  float: right;
+  position: relative;
+  margin: 30px 30px 50px 30px;
+}
+
+/* Hide slideshow images by default */
+.feneryss-slides {
+  display: none;
+  overflow: hidden;
+}
+
+/* resize images in feneryss slideshow and hide overflow */
+.feneryss-slides img {
+    max-width: 800px;
+    max-height: 352px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/*Slideshow container for monsters. Should have inverse measurements compared to the feneryss slides */
+.monster-slideshow {
+    height: 600px;
+    width: 400px;
+    float: left;
+    position: relative;
+    margin: 30px 30px 50px 30px;
+}
+
+/*hide monsters by default and hide overflow */
+.monster-slides {
+    display: none;
+    overflow: hidden;
+}
+
+/* resize images and hide overflow */
+.monster-slides img {
+    align-items: center;
+    max-width: 400px;
+    max-height: 600px;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Next & previous buttons for slideshows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position next button on the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: navajowhite;
+  font-size: 14px;
+  background-color: black;
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  text-align: center;
+}
+
+.monster-slides .text{
+    bottom: 0px;
+}
+
+/* size and style settings for the navi-dots on the slideshow */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/*lights up the dot when cursor hovers over it*/
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation for the slideshow transitions*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+} 
 
 /*basic modification for small screens*/
 @media screen and (max-height: 450px) {

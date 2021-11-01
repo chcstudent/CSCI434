@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
   <!--Assignment: CSCI Unit 2 Assignment 1
-    Date: 24 OCT 21
+    Date: 31 OCT 21
     Name: Cory Conrad
     Description: A webpage pitching the TTRPG, Shattered. 5 pages, including .
   -->
@@ -29,15 +29,98 @@
 
 <!--main class separates the main body of the page from the navbar -->
 	<div class="main">
-		  <img class="logo" src="shattered_small.png">
+        <img class="logo" src="shattered_small.png">
 		<br>
-		<img class="monster" src="MSTR - Chirshun.png">
-		<img class="monster" src="MSTR - Hangel.jpg">
-		<img class="monster" src="MSTR - HeartwoodSloth.png">
-		<img class="monster" src="MSTR - Spinewretch.png">
-		<!--<img class="monster" src="MSTR - Mechani-diver.jpg">-->
-		<img class="monster" src="MSTR - Annalis Misellus.jpg">
-	</div>
+        
+<!-- Slideshow container -->
+        <div class="monster-slideshow">
+
+<!-- Monster slides with captions -->
+          <div class="monster-slides fade">
+            <img src="MSTR%20-%20HeartwoodSloth.png">
+            <div class="text">Named for their symbiotic relationship with the Heartwood Forest, heartwood sloths "fish" for prey from the tree branches.</div>
+          </div>
+
+          <div class="monster-slides fade">
+            <img src="MSTR%20-%20Chirshun.png">
+            <div class="text">Formerly sentient, Chirshun now prowl their burrows half-mad and keenly aware of their loss.</div>
+          </div>
+            
+          <div class="monster-slides fade">
+            <img src="MSTR%20-%20Spinewretch.png">
+            <div class="text">A spinewretch begins its life cycle the size of an adult hand, but fully grown they are capable of swallowing a person whole.</div>
+          </div>
+          
+          <div class="monster-slides fade">
+            <img src="MSTR%20-%20Hangel.jpg">
+            <div class="text">Hangels are remnants, creatures from Ragnarok's realm. For reasons unknown, they collect the hands of other species and sew them into great wings.</div>
+          </div>
+            
+          <div class="monster-slides fade">
+            <img src="MSTR%20-%20Annalis%20Misellus.jpg">
+            <div class="text"> Annalis Misellus is said to steal its victims' eyes to learn what they have seen. Rumors claim a sufficient offering of knowledge could elude this grim fate.</div>
+          </div>
+
+<!-- Next and previous buttons to move between slides -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+<!-- The slideshow dots -->
+          <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+        
+        </div>
+        <!--End of Slideshow container -->
+
+        <h1 class="world-header">
+            Nemzul's Bestiary
+        </h1>
+        <p>
+            In an effort to aid his fellow Feneryans, one man has made it his life's work to classify, catalog, and characterize the many terrifying creatures and eldritch horrors that now share the broken world with mankind. 
+            <br>
+            <br>
+            Bardic Nemzul is, by most accounts, a madman with a death wish, but his efforts are nevertheless lauded by any and all who venture outside the safety of Feneryss's city-states. His detailed drawings and firsthand accounts are unparalleled.
+            <br>
+            <br>
+            Also unparalleled is his wild fortune: he has narrowly avoided death and experienced firsthand encounters that should have left him dead a hundred times over; on the other hand, his poor luck with love has left a frightening body count in his wake. A widower by monster, disease, and a bad fall- to name just a few- it is probably best to keep your distance from this man.
+        </p>
+    </div>
+     
+<!-- javascript required to run the slideshow and perform the fade transition -->    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("monster-slides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+
   </body>
   
 </html>
